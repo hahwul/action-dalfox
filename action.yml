@@ -20,8 +20,6 @@ runs:
   using: 'docker'
   image: 'docker://hahwul/dalfox:latest'
   args:
-    - 'bash -c "echo ${{ inputs.target }} | /app/dalfox"'
-    - ${{ inputs.mode}}
-    - ${{ inputs.target }}
-    - '--silence'
-    - ${{ inputs.cmd_options }}
+    - 'bash'
+    - '-c'
+    - 'echo "${{ inputs.target }}" | /app/dalfox ${{ inputs.mode}} "${{ inputs.target }} --silence ${{ inputs.cmd_options }}"'
