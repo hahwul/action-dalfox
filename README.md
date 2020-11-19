@@ -1,7 +1,6 @@
-# Action-dalfox
-![Docker build test](https://github.com/hahwul/action-dalfox/workflows/Docker%20build%20test/badge.svg) ![Action vaild test](https://github.com/hahwul/action-dalfox/workflows/Action%20vaild%20test/badge.svg)
+# XSS scanning with Dalfox on Github-action
 
-XSS scanning with Dalfox on Github-action
+![Docker build test](https://github.com/hahwul/action-dalfox/workflows/Docker%20build%20test/badge.svg) ![Action vaild test](https://github.com/hahwul/action-dalfox/workflows/Action%20vaild%20test/badge.svg)
 
 ## Getting Started
 ### Usage
