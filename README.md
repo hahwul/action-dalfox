@@ -33,11 +33,22 @@ Send slack/github issue/Submit JIRA, etc.. with found-action option
 ### XSS Scanning
 xss.yaml
 ```yaml
-- name: Dalfox scan
-  uses: hahwul/dalfox-action@master
-  id: xss-result
-  with:
-    target: 'https://xss-game.appspot.com/level1/frame'
-    mode: url
-    cmd_options: '--follow-redirects'
+on: [push]
+
+jobs:
+  dalfox_scan:
+    runs-on: ubuntu-latest
+    name: XSS Scanning
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Dalfox scan
+        uses: hahwul/dalfox-action@master
+        id: xss-result
+        with:
+          target: 'https://xss-game.appspot.com/level1/frame'
+          mode: url
+          cmd_options: '--follow-redirects'
 ```
