@@ -1,5 +1,5 @@
-name: 'Dalfox XSS Scan'
-description: 'XSS Scans the web application with the Dalfox'
+name: 'XSS Scan with Dalfox'
+description: 'XSS Scanning the web application with the Dalfox'
 branding:
   icon: 'activity'
   color: 'purple'
