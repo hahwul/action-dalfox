@@ -1,5 +1,7 @@
-# action-dalfox
+# Action-dalfox
 XSS scanning with Dalfox on Github-action
+
+![Docker build test](https://github.com/hahwul/action-dalfox/workflows/Docker%20build%20test/badge.svg)
 
 ## Getting Started
 ### Usage
