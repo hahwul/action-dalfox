@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  dalfox_scan:
+    runs-on: ubuntu-latest
+    name: XSS Scanning
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Dalfox scan
+        uses: hahwul/dalfox-action@master
+        id: xss-result
+        with:
+          target: 'https://xss-game.appspot.com/level1/frame'
+          mode: url
+          cmd_options: '--follow-redirects'
