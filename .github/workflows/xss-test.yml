@@ -1,16 +1,17 @@
+name: Action vaild test
 on: [push]
 
 jobs:
   dalfox_scan:
     runs-on: ubuntu-latest
-    name: Action vaild test
+    name: Test scanning
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: master
       - name: Dalfox scan
-        uses: hahwul/action-dalfox@master
+        uses: hahwul/action-dalfox@main
         id: xss-result
         with:
           target: 'https://xss-game.appspot.com/level1/frame'
