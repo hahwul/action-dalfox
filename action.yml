@@ -1,0 +1,27 @@
+name: 'Dalfox XSS Scan'
+description: 'XSS Scans the web application with the Dalfox'
+branding:
+  icon: 'activity'
+  color: 'purple'
+inputs:
+  mode:
+    description: 'Scanning Mode ( url / file / pipe / sxss )'
+    required: true
+  target:
+    description: 'Target URL'
+    required: true
+  cmd_options:
+    description: 'Additional command line options'
+    required: false
+outputs:
+  RESULT: 
+    description: 'Scan Result'    
+runs:
+  using: 'docker'
+  image: 'docker://hahwul/dalfox:latest'
+  args:
+    - '/app/dalfox'
+    - ${{ inputs.mode}}
+    - ${{ inputs.target }}
+    - '--silence'
+    - ${{ inputs.cmd_options }}
