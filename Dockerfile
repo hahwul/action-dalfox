@@ -1,2 +1,2 @@
-FROM hahwul/dalfox:latest
+FROM ghcr.io/hahwul/dalfox:main
 CMD ["/app/dalfox"]
